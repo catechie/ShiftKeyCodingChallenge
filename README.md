@@ -34,10 +34,10 @@ To start working on the challenge, clone this repo onto your development machine
 
 ### Marjor design pattern and Android components used 
 Show case of 
-*MVVM architecture,
-*ViewModel coroutine scope
-*RecycleView and it's adapter
-*Pull to Refresh layout for the detailed view
-*Jetpack Navigation, 
-*Databinding to simplify coding in UI(activity) by moving the binding to layout file, 
-*LiveData observed in UI to avoid AND and comply with single responsibility design principle
+* MVVM architecture,
+* iewModel coroutine scope
+* RecycleView and it's adapter
+* Pull to Refresh layout for the detailed view
+* Jetpack Navigation for future scalability, 
+* Databinding to simplify coding in UI(activity) by moving the binding to layout file, 
+* LiveData observed in UI to avoid AND and comply with single responsibility design principle
