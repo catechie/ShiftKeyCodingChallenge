@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi"
+    app:startDestination="@id/shiftList">
+
+    <fragment
+        android:id="@+id/shiftList"
+        android:name="com.shiftkey.codingchallenge.ShiftListFragment"
+        android:label="ShiftList"
+        tools:layout="@layout/fragment_shift_list">
+        <action
+            android:id="@+id/shiftListAction"
+            app:destination="@id/shiftDetail"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:launchSingleTop="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/shiftDetail"
+        android:name="com.shiftkey.codingchallenge.ShiftDetailFragment"
+        android:label="ShiftDetail">
+        <action
+            android:id="@+id/shiftDetialAction"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <argument
+            android:name="SHIFT_IDX"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

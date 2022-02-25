@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="shiftItem"
+            type="com.shiftkey.data.Shift" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:text="covid"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="28dp" />
+        <TextView
+            android:id="@+id/covid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@{String.valueOf(shiftItem.covid)}"
+            app:layout_constraintStart_toStartOf="@+id/tv1"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:text="start time"
+            app:layout_constraintStart_toStartOf="@id/covid"
+            app:layout_constraintTop_toBottomOf="@id/covid" />
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(shiftItem.start_time)}"
+            app:layout_constraintStart_toStartOf="@+id/tv2"
+            app:layout_constraintTop_toBottomOf="@+id/tv2" />
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:text="end time"
+            app:layout_constraintStart_toStartOf="@id/start_time"
+            app:layout_constraintTop_toBottomOf="@id/start_time" />
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@{String.valueOf(shiftItem.end_time)}"
+            app:layout_constraintStart_toStartOf="@+id/tv3"
+            app:layout_constraintTop_toBottomOf="@+id/tv3" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:text="skill"
+            app:layout_constraintStart_toStartOf="@id/end_time"
+            app:layout_constraintTop_toBottomOf="@id/end_time" />
+        <TextView
+            android:id="@+id/skill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@{String.valueOf(shiftItem.skill)}"
+            app:layout_constraintStart_toStartOf="@+id/tv"
+            app:layout_constraintTop_toBottomOf="@+id/tv" />
+        <TextView
+            android:id="@+id/facilitytype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="facility type"
+            app:layout_constraintStart_toStartOf="@id/skill"
+            app:layout_constraintTop_toBottomOf="@id/skill" />
+
+        <TextView
+            android:id="@+id/facility_type"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="5dp"
+            android:text="@{String.valueOf(shiftItem.facility_type)}"
+            app:layout_constraintStart_toStartOf="@+id/facilitytype"
+            app:layout_constraintTop_toBottomOf="@+id/facilitytype"
+            android:layout_marginLeft="1dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:text="localized specialty"
+            app:layout_constraintStart_toStartOf="@id/facility_type"
+            app:layout_constraintTop_toBottomOf="@id/facility_type" />
+
+        <TextView
+            android:id="@+id/localized_specialty"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginLeft="28dp"
+            android:text="@{String.valueOf(shiftItem.localized_specialty)}"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="shift id"
+            app:layout_constraintStart_toStartOf="@id/localized_specialty"
+            app:layout_constraintTop_toBottomOf="@id/localized_specialty" />
+
+        <TextView
+            android:id="@+id/shift_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@{String.valueOf(shiftItem.shift_id)}"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="1dp"
+            android:text="shift kind"
+            app:layout_constraintStart_toStartOf="@id/shift_id"
+            app:layout_constraintTop_toBottomOf="@id/shift_id" />
+
+        <TextView
+            android:id="@+id/shift_kind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:text="@{String.valueOf(shiftItem.shift_kind)}"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="within distance"
+            app:layout_constraintStart_toStartOf="@id/shift_kind"
+            app:layout_constraintTop_toBottomOf="@id/shift_kind" />
+
+        <TextView
+            android:id="@+id/within_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(shiftItem.within_distance)}"
+            app:layout_constraintStart_toStartOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
